@@ -1,0 +1,24 @@
+{
+  "name": "contab-det",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "pino": "^9.1.0",
+    "puppeteer": "^22.10.0",
+    "tsx": "^4.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "pino-pretty": "^11.1.0",
+    "typescript": "^5.4.5"
+  }
+}
