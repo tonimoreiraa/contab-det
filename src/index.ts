@@ -33,7 +33,7 @@ async function main()
 
         const company = companies[i]
         const name = Object.values(company)[0]
-        const changeProfileButton = await page.waitForSelector('#content > app-servicos > app-info-empregador > div > div:nth-child(2) > div > strong > button')
+        const changeProfileButton = await page.waitForSelector('#content app-info-empregador .is-secondary')
         await new Promise(r => setTimeout(r, 1000))
         changeProfileButton?.click()
 
