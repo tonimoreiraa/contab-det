@@ -10,7 +10,7 @@ async function runCompany(page: Page, company: any, i: number) {
 
   const name = Object.values(company)[0];
   const changeProfileButton = await page.waitForSelector(
-    "#content app-info-empregador .is-secondary"
+    "body > app-root > br-main-layout > div > div > div > main > app-servicos > app-info-empregador > div > div > div > div.button > span > button"
   );
   await new Promise((r) => setTimeout(r, 1000));
   changeProfileButton?.click();
@@ -31,7 +31,7 @@ async function runCompany(page: Page, company: any, i: number) {
   const cnpj = cnpjFormatter(company.CNPJ);
   logger.info(`Logando na empresa ${name} com CNPJ: ${cnpj}`);
   await page.$eval(
-    "body > modal-container > div > div > app-modal-perfil > div.modal-body > form > div:nth-child(2) > div > br-input > div > div > input",
+    "body > modal-container > div.modal-dialog.modal-width-40 > div > app-modal-perfil > div.modal-body > form > div:nth-child(2) > div > br-input > div > div.br-input.medium > div > input",
     (input, value) => {
       input.value = value;
       const event = new Event("input", { bubbles: true });
